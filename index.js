@@ -36,7 +36,7 @@ app.use("/api", [cors(), upload.single("Image")], routes);
 app.use("/",swaggerUi.serve,swaggerUi.setup(swaggerDocs));
 */
 app.get((req,res)=>{res.send("running...")});
-const port = process.env.LOCAL_PORT || 3002;
+const port =5000 ;//process.env.LOCAL_PORT || 3002;
 
 http.listen(port, () => {
     console.log('started listening at http://localhost:' + port + "/");
