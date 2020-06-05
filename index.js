@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const http = require("http").createServer(app);
-require('dotenv').config();
+/*require('dotenv').config();
 const routes = require("./src/routes");
 const cors = require("cors");
 const multer = require('multer');
@@ -34,7 +34,10 @@ app.use(bodyParser.json());
 app.use('/public', express.static(__dirname + "/public"));
 app.use("/api", [cors(), upload.single("Image")], routes);
 app.use("/",swaggerUi.serve,swaggerUi.setup(swaggerDocs));
+*/
+app.get((req,res)=>{res.send("running...")});
 const port = process.env.LOCAL_PORT || 3002;
+
 http.listen(port, () => {
     console.log('started listening at http://localhost:' + port + "/");
 });
