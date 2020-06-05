@@ -1,0 +1,80 @@
+==========================================
+Tue Jun 02 2020
+"Database error."
+
+==========================================
+Tue Jun 02 2020
+"Database error."
+
+==========================================
+Tue Jun 02 2020
+"Database error."
+
+==========================================
+Tue Jun 02 2020
+"Database error."
+
+==========================================
+Tue Jun 02 2020
+"Database error."
+
+==========================================
+Tue Jun 02 2020
+"Database error."
+
+==========================================
+Tue Jun 02 2020
+"Database error."
+
+==========================================
+Tue Jun 02 2020
+{"code":"EREQUEST","originalError":{"info":{"name":"ERROR","event":"errorMessage","number":195,"state":10,"class":15,"message":"'isnnull' is not a recognized built-in function name.","serverName":"DESKTOP-7IILDQ0\\SQLEXPRESS","procName":"","lineNumber":1}},"name":"RequestError","number":195,"lineNumber":1,"state":10,"class":15,"serverName":"DESKTOP-7IILDQ0\\SQLEXPRESS","procName":"","precedingErrors":[]}
+
+==========================================
+Tue Jun 02 2020
+"Database error."
+
+==========================================
+Tue Jun 02 2020
+{"code":"EREQUEST","originalError":{"info":{"name":"ERROR","event":"errorMessage","number":201,"state":4,"class":16,"message":"Procedure or function 'SP_PRODUCT_ADD' expects parameter '@Stock', which was not supplied.","serverName":"DESKTOP-7IILDQ0\\SQLEXPRESS","procName":"SP_PRODUCT_ADD","lineNumber":0}},"name":"RequestError","number":201,"lineNumber":0,"state":4,"class":16,"serverName":"DESKTOP-7IILDQ0\\SQLEXPRESS","procName":"SP_PRODUCT_ADD","precedingErrors":[]}
+
+==========================================
+Wed Jun 03 2020
+{"code":"EREQUEST","originalError":{"info":{"name":"ERROR","event":"errorMessage","number":201,"state":4,"class":16,"message":"Procedure or function 'SP_PRODUCT_DELETE' expects parameter '@UpdatedBy', which was not supplied.","serverName":"DESKTOP-7IILDQ0\\SQLEXPRESS","procName":"SP_PRODUCT_DELETE","lineNumber":0}},"name":"RequestError","number":201,"lineNumber":0,"state":4,"class":16,"serverName":"DESKTOP-7IILDQ0\\SQLEXPRESS","procName":"SP_PRODUCT_DELETE","precedingErrors":[]}
+
+==========================================
+Thu Jun 04 2020
+{"code":"EREQUEST","originalError":{"info":{"name":"ERROR","event":"errorMessage","number":8114,"state":5,"class":16,"message":"Error converting data type nvarchar to date.","serverName":"DESKTOP-7IILDQ0\\SQLEXPRESS","procName":"SP_ADD_NEW_CSA","lineNumber":0}},"name":"RequestError","number":8114,"lineNumber":0,"state":5,"class":16,"serverName":"DESKTOP-7IILDQ0\\SQLEXPRESS","procName":"SP_ADD_NEW_CSA","precedingErrors":[]}
+
+==========================================
+Thu Jun 04 2020
+{"code":"EREQUEST","originalError":{"info":{"name":"ERROR","event":"errorMessage","number":8114,"state":5,"class":16,"message":"Error converting data type nvarchar to date.","serverName":"DESKTOP-7IILDQ0\\SQLEXPRESS","procName":"SP_ADD_NEW_CSA","lineNumber":0}},"name":"RequestError","number":8114,"lineNumber":0,"state":5,"class":16,"serverName":"DESKTOP-7IILDQ0\\SQLEXPRESS","procName":"SP_ADD_NEW_CSA","precedingErrors":[]}
+
+==========================================
+Thu Jun 04 2020
+{"code":"EREQUEST","originalError":{"info":{"name":"ERROR","event":"errorMessage","number":8114,"state":5,"class":16,"message":"Error converting data type nvarchar to date.","serverName":"DESKTOP-7IILDQ0\\SQLEXPRESS","procName":"SP_ADD_NEW_CSA","lineNumber":0}},"name":"RequestError","number":8114,"lineNumber":0,"state":5,"class":16,"serverName":"DESKTOP-7IILDQ0\\SQLEXPRESS","procName":"SP_ADD_NEW_CSA","precedingErrors":[]}
+
+==========================================
+Thu Jun 04 2020
+{"code":"EREQUEST","originalError":{"info":{"name":"ERROR","event":"errorMessage","number":208,"state":1,"class":16,"message":"Invalid object name 'CustomersServiceAgent'.","serverName":"DESKTOP-7IILDQ0\\SQLEXPRESS","procName":"SP_EDIT_CSA","lineNumber":16}},"name":"RequestError","number":208,"lineNumber":16,"state":1,"class":16,"serverName":"DESKTOP-7IILDQ0\\SQLEXPRESS","procName":"SP_EDIT_CSA","precedingErrors":[]}
+
+==========================================
+Thu Jun 04 2020
+{"code":"EREQUEST","originalError":{"info":{"name":"ERROR","event":"errorMessage","number":2812,"state":62,"class":16,"message":"Could not find stored procedure 'select * from CustomerServiceAgent where ISNULL(DELETED,0)=0 and where id='undefined''.","serverName":"DESKTOP-7IILDQ0\\SQLEXPRESS","procName":"select * from CustomerServiceAgent where ISNULL(DELETED,0)=0 and where id='undefined'","lineNumber":1}},"name":"RequestError","number":2812,"lineNumber":1,"state":62,"class":16,"serverName":"DESKTOP-7IILDQ0\\SQLEXPRESS","procName":"select * from CustomerServiceAgent where ISNULL(DELETED,0)=0 and where id='undefined'","precedingErrors":[]}
+
+==========================================
+Thu Jun 04 2020
+{"code":"EREQUEST","originalError":{"info":{"name":"ERROR","event":"errorMessage","number":2812,"state":62,"class":16,"message":"Could not find stored procedure 'select * from CustomerServiceAgent where ISNULL(DELETED,0)=0 and where id='undefined''.","serverName":"DESKTOP-7IILDQ0\\SQLEXPRESS","procName":"select * from CustomerServiceAgent where ISNULL(DELETED,0)=0 and where id='undefined'","lineNumber":1}},"name":"RequestError","number":2812,"lineNumber":1,"state":62,"class":16,"serverName":"DESKTOP-7IILDQ0\\SQLEXPRESS","procName":"select * from CustomerServiceAgent where ISNULL(DELETED,0)=0 and where id='undefined'","precedingErrors":[]}
+
+==========================================
+Thu Jun 04 2020
+{"code":"EREQUEST","originalError":{"info":{"name":"ERROR","event":"errorMessage","number":2812,"state":62,"class":16,"message":"Could not find stored procedure 'select * from CustomerServiceAgent where ISNULL(DELETED,0)=0 and where id='undefined''.","serverName":"DESKTOP-7IILDQ0\\SQLEXPRESS","procName":"select * from CustomerServiceAgent where ISNULL(DELETED,0)=0 and where id='undefined'","lineNumber":1}},"name":"RequestError","number":2812,"lineNumber":1,"state":62,"class":16,"serverName":"DESKTOP-7IILDQ0\\SQLEXPRESS","procName":"select * from CustomerServiceAgent where ISNULL(DELETED,0)=0 and where id='undefined'","precedingErrors":[]}
+
+==========================================
+Thu Jun 04 2020
+{"code":"EREQUEST","originalError":{"info":{"name":"ERROR","event":"errorMessage","number":2812,"state":62,"class":16,"message":"Could not find stored procedure 'select * from CustomerServiceAgent where ISNULL(DELETED,0)=0 and where id='undefined''.","serverName":"DESKTOP-7IILDQ0\\SQLEXPRESS","procName":"select * from CustomerServiceAgent where ISNULL(DELETED,0)=0 and where id='undefined'","lineNumber":1}},"name":"RequestError","number":2812,"lineNumber":1,"state":62,"class":16,"serverName":"DESKTOP-7IILDQ0\\SQLEXPRESS","procName":"select * from CustomerServiceAgent where ISNULL(DELETED,0)=0 and where id='undefined'","precedingErrors":[]}
+
+==========================================
+Thu Jun 04 2020
+{}
+

@@ -1,0 +1,17 @@
+var routes = require("express").Router();
+const bodyParser = require('body-parser');
+routes.use(bodyParser.urlencoded({ extended: false }));
+routes.use(bodyParser.json());
+var account = require("./account.routes");
+const user =require("./user.routes");
+const zone =require("./zone.routes");
+const product =require("./product.routes");
+const CRM =require("./crm.routes");
+const order =require("./order.routes");
+routes.use("/account", account);
+routes.use("/user",user);
+routes.use("/zone",zone);
+routes.use("/product",product);
+routes.use("/crm",CRM);
+routes.use("/order",order);
+module.exports = routes;

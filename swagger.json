@@ -1,0 +1,1566 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Delivery App - APIs",
+        "version": "1.0.0",
+        "title": "Swagger Devlivery App"
+    },
+    "host": "192.168.43.169:3001",
+    "basePath": "/api",
+    "tags": [
+        {
+            "name": "Authentication",
+            "description": ""
+        },
+        {
+            "name": "User",
+            "description": ""
+        },
+        {
+            "name": "Zone",
+            "description": ""
+        }
+    ],
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "paths": {
+        "/account/login": {
+            "post": {
+                "tags": [
+                    "Authentication"
+                ],
+                "summary": "Login",
+                "description": "",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/userLogin"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/get-user": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Get user",
+                "description": "",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/get-admins": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Get all admins list",
+                "description": "Must be an admin to access this method",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/get-merchants": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Get list of all merchants.",
+                "description": "Must be an admin to access this method.",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/get-shopowners": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Get list of all shop owners.",
+                "description": "Must be an admin to access this method.",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    }
+                    
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/get-deliverymen": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Get all delivery men.",
+                "description": "Must be an admin to access this method.",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/add-new-admin": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Add new admin",
+                "description": "Admin access",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in":"body",
+                        "name":"body",
+                        "required":"",
+                        "schema":{
+                            "$ref":"#/definitions/addAdmin"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/add-new-merchant": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Add mechant",
+                "description": "Admin access",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/addMerchant"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/add-new-shopowner": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Add shopowner",
+                "description": "Admin access",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in":"body",
+                        "name":"body",
+                        "required":"",
+                        "schema":{
+                            "$ref":"#/definitions/addShopowner"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/add-new-deliverymen": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Add delivery man",
+                "description": "Admin access",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/addDeliveryMan"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/edit-admin": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Update admin",
+                "description": "Admin access",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/editAdmin"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/edit-merchant": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Update merchant",
+                "description": "Admin access",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in":"body",
+                        "name":"body",
+                        "required":"",
+                        "schema":{
+                            "$ref":"#/definitions/editMerchant"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/edit-shopowner": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Update shopowner",
+                "description": "Admin access",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in":"body",
+                        "name":"body",
+                        "required":"",
+                        "schema":{
+                            "$ref":"#/definitions/editShopowner"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/edit-deliverymen": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Update delivery man",
+                "description": "Admin access",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/editDeliveryMan"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/view-admin": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "View admin",
+                "description": "Admin access",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "Id",
+                        "description": "",
+                        "required": true,
+                       "type":"integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/view-merchant": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "View merchant",
+                "description": "Admin access",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "Id",
+                        "description": "",
+                        "required": true,
+                       "type":"integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/view-shopowner": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "View shop owner",
+                "description": "Admin access",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "Id",
+                        "description": "",
+                        "required": true,
+                       "type":"integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/view-deliverymen": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "View deliveryman",
+                "description": "Admin access",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "Id",
+                        "description": "",
+                        "required": true,
+                       "type":"integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/delete-admin": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Delete admin",
+                "description": "Admin access",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "Id",
+                        "description": "",
+                        "required": true,
+                       "type":"integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/delete-merchant": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Delete mechant ",
+                "description": "Admin access",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "Id",
+                        "description": "",
+                        "required": true,
+                       "type":"integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/delete-shopowner": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Delete shop owner",
+                "description": "Admin access",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "Id",
+                        "description": "",
+                        "required": true,
+                       "type":"integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/delete-deliverymen": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Delete delivery man",
+                "description": "Admin access",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "Id",
+                        "description": "",
+                        "required": true,
+                       "type":"integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/zone/add": {
+            "post": {
+                "tags": [
+                    "Zone"
+                ],
+                "summary": "Add zone",
+                "description": "Admin access",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "required": true,
+                       "schema":{
+                           "$ref":"#/definitions/addZone"
+                       }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },  
+        "/zone/update": {
+            "post": {
+                "tags": [
+                    "Zone"
+                ],
+                "summary": "Update zone",
+                "description": "Admin access",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "required": true,
+                       "schema":{
+                           "$ref":"#/definitions/editZone"
+                       }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },  
+        "/zone/delete": {
+            "post": {
+                "tags": [
+                    "Zone"
+                ],
+                "summary": "Delete zone",
+                "description": "Admin access",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "required": true,
+                       "type":"object",
+                       "properties":{
+                           "Id":{
+                               "type":"integer"
+                           }
+                       }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/zone/get-all": {
+            "get": {
+                "tags": [
+                    "Zone"
+                ],
+                "summary": "Get all zones",
+                "description": "Admin access",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    }                    
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/zone/get/:id": {
+            "get": {
+                "tags": [
+                    "Zone"
+                ],
+                "summary": "Get zone",
+                "description": "Admin access",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "route",
+                        "name": "id",
+                        "description": "",
+                        "required": true,
+                       "type":"integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/product/get": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "summary": "Get zone",
+                "description": "Admin access",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "route",
+                        "name": "id",
+                        "description": "",
+                        "required": false,
+                       "type":"integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/product/add": {
+            "post": {
+                "tags": [
+                    "Product"
+                ],
+                "summary": "Add zone",
+                "description": "Admin access",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "required": true,
+                       "schema":{
+                           "$ref":"#/definitions/addProduct"
+                       }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/product/update": {
+            "post": {
+                "tags": [
+                    "Product"
+                ],
+                "summary": "Update zone",
+                "description": "Admin access",
+                "operationId": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Access token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "required": true,
+                       "schema":{
+                           "$ref":"#/definitions/editProduct"
+                       }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        }
+
+    },
+    "definitions": {
+        "userLogin": {
+            "type": "object",
+            "properties": {
+                "username": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            }
+        },
+        "addAdmin": {
+            "type": "object",
+            "properties": {
+                "FirstName": {
+                    "type": "string"
+                },
+                "LastName": {
+                    "type": "string"
+                },
+                "Dob": {
+                    "type": "string"
+                },
+                "Gender": {
+                    "type": "string"
+                },
+                "Username": {
+                    "type": "string"
+                },
+                "Password": {
+                    "type": "string"
+                }
+            }
+        },
+        "addMerchant": {
+            "type": "object",
+            "properties": {
+                "FirstName": {
+                    "type": "string"
+                },
+                "LastName": {
+                    "type": "string"
+                },
+                "Address": {
+                    "type": "string"
+                },
+                "Contact": {
+                    "type": "string"
+                },
+                "Commission": {
+                    "type": "string"
+                },
+                "Username": {
+                    "type": "string"
+                },
+                "Password": {
+                    "type": "string"
+                }
+            }
+        },
+        "addShopowner": {
+            "type": "object",
+            "properties": {
+                "FirstName": {
+                    "type": "string"
+                },
+                "LastName": {
+                    "type": "string"
+                },
+                "Bussiness_Name": {
+                    "type": "string"
+                },
+                "Facebook_Name": {
+                    "type": "string"
+                },
+                "Facebook_Page": {
+                    "type": "string"
+                },
+                "Address": {
+                    "type": "string"
+                },
+                "Postal_Code": {
+                    "type": "string"
+                },
+                "State": {
+                    "type": "string"
+                },
+                "City": {
+                    "type": "string"
+                },
+                "Contact": {
+                    "type": "string"
+                }, "Username": {
+                    "type": "string"
+                }, "Password": {
+                    "type": "string"
+                }
+            }
+        },
+        "addDeliveryMan": {
+            "type": "object",
+            "properties": {
+                "FirstName":{"type":"string"},
+                "LastName":{"type":"string"},
+                "Address":{"type":"string"},
+                "Gender":{"type":"string"},
+                "JoiningDate":{"type":"string"},
+                "Contact":{"type":"string"},
+                "Model":{"type":"string"},
+                "PlateNumber":{"type":"string"},
+                "Series":{"type":"string"},
+                "Commission":{"type":"string"},
+                "Username":{"type":"string"},
+                "Password":{"type":"string"}
+            }
+        },
+        "editAdmin": {
+            "type": "object",
+            "properties": {
+                "Id":{
+                    "type":"integer"
+                },
+                "FirstName": {
+                    "type": "string"
+                },
+                "LastName": {
+                    "type": "string"
+                },
+                "Dob": {
+                    "type": "string"
+                },
+                "Gender": {
+                    "type": "string"
+                }
+            }
+        },
+        "editMerchant": {
+            "type": "object",
+            "properties": {
+                "Id":{
+                    "type":"integer"
+                },
+                "FirstName": {
+                    "type": "string"
+                },
+                "LastName": {
+                    "type": "string"
+                },
+                "Address": {
+                    "type": "string"
+                },
+                "Contact": {
+                    "type": "string"
+                },
+                "Commission": {
+                    "type": "string"
+                }
+            }
+        },
+        "editShopowner": {
+            "type": "object",
+            "properties": {
+                "Id":{
+                    "type":"integer"
+                },
+                "FirstName": {
+                    "type": "string"
+                },
+                "LastName": {
+                    "type": "string"
+                },
+                "Bussiness_Name": {
+                    "type": "string"
+                },
+                "Facebook_Name": {
+                    "type": "string"
+                },
+                "Facebook_Page": {
+                    "type": "string"
+                },
+                "Address": {
+                    "type": "string"
+                },
+                "Postal_Code": {
+                    "type": "string"
+                },
+                "State": {
+                    "type": "string"
+                },
+                "City": {
+                    "type": "string"
+                },
+                "Contact": {
+                    "type": "string"
+                }
+            }
+        },
+        "editDeliveryMan": {
+            "type": "object",
+            "properties": {
+                "Id":{
+                    "type":"integer"
+                },
+                "FirstName":{"type":"string"},
+                "LastName":{"type":"string"},
+                "Address":{"type":"string"},
+                "Gender":{"type":"string"},
+                "JoiningDate":{"type":"string"},
+                "Contact":{"type":"string"},
+                "Model":{"type":"string"},
+                "PlateNumber":{"type":"string"},
+                "Series":{"type":"string"},
+                "Commission":{"type":"string"}
+            }
+        },
+        "addZone": {
+            "type": "object",
+            "properties": {
+                "ZoneName": {
+                    "type": "string"
+                },
+                "ZoneCode": {
+                    "type": "string"
+                },
+                "ZoneAddress": {
+                    "type": "string"
+                },
+                "ZonePickupPrice": {
+                    "type": "string"
+                },
+                "ZoneDeliveryPrice": {
+                    "type": "string"
+                },
+                "ZoneDeliveryFood": {
+                    "type": "string"
+                }
+            }
+        },
+        "editZone": {
+            "type": "object",
+            "properties": {
+                "Id":{
+                    "type":"integer"
+                },
+                "ZoneName": {
+                    "type": "string"
+                },
+                "ZoneCode": {
+                    "type": "string"
+                },
+                "ZoneAddress": {
+                    "type": "string"
+                },
+                "ZonePickupPrice": {
+                    "type": "string"
+                },
+                "ZoneDeliveryPrice": {
+                    "type": "string"
+                },
+                "ZoneDeliveryFood": {
+                    "type": "string"
+                }
+            }
+        },
+        "addProduct":{
+            "type":"object",
+            "properties":{
+                "ProductName":{"type":"string"},
+                "ShopOwnerId":{"type":"integer"},
+                "ProductDetails":{"type":"string"},
+                "ItemDescription":{"type":"string"},
+                "ItemSize":{"type":"integer"}
+            }
+        },
+        "editProduct":{
+            "type":"object",
+            "properties":{
+                "Id":{"type":"integer"},
+                "ProductName":{"type":"string"},
+                "ShopOwnerId":{"type":"integer"},
+                "ProductDetails":{"type":"string"},
+                "ItemDescription":{"type":"string"},
+                "ItemSize":{"type":"integer"}
+            }
+        },
+        "ApiResponse": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "message": {
+                    "type": "string"
+                },
+                "data": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}
