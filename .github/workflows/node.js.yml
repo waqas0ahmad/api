@@ -24,6 +24,10 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
+        url: 'http://3.109.155.17:8000/api/user'
+        method: 'POST'
+        customHeaders: '{"Content-Type": "application/json"}'
+        data: '{"email": "sohail@email.com", "password": "Abc@123"}'
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
