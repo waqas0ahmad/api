@@ -32,7 +32,7 @@ jobs:
       run: |
         echo ${{ fromJson(steps.LogintoSite.outputs.response).status }}
     - name: Fail     
-      run: if [[ ${{ fromJson(steps.LogintoSite.outputs.response).status }} != 200 ]];  else exit 1;then exit 0; fi
+      run: if [[ ${{ fromJson(steps.LogintoSite.outputs.response).status }} != 200 ]];  else exit 1;then exit 0;
       
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
