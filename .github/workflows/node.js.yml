@@ -31,7 +31,13 @@ jobs:
     - name: Show Response
       run: |
         echo ${{ fromJson(steps.LogintoSite.outputs.response).status }}
-    
+    - name: Fail
+      if: ${{ fromJson(steps.LogintoSite.outputs.response).status }} != ${{ 200 }}
+      uses: actions/github-script@v3
+      with:
+        script: |
+            core.setFailed('envA and envB are not equivalent!')
+      
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
