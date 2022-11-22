@@ -27,7 +27,7 @@ jobs:
          url: 'http://3.109.155.17:8000/api/user/login'
          method: 'POST'
          customHeaders: '{"Content-Type": "application/json"}'
-         data: '{"email": "sohail@email.com", "password": "Abc@12345"}'
+         data: '{"email": "sohail@email.com", "password": "Abc@123"}'
     - name: Show Response
       run: |
         echo ${{ fromJson(steps.LogintoSite.outputs.response).status }}
@@ -36,7 +36,7 @@ jobs:
       uses: actions/github-script@v3
       with:
         script: |
-            core.setFailed('envA and envB are not equivalent!')
+            core.setFailed('Login failed')
       
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
