@@ -32,7 +32,7 @@ jobs:
       run: |
         echo ${{ fromJson(steps.LogintoSite.outputs.response).status }}
     - name: Fail
-      if: ${{ fromJson(steps.LogintoSite.outputs.response).status }} != ${{ 200 }}
+      if: ${{ fromJson(steps.LogintoSite.outputs.response).status }} != ${{ '200' }}
       uses: actions/github-script@v3
       with:
         script: |
