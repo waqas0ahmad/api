@@ -32,7 +32,7 @@ jobs:
       with:
         url: "http://3.109.155.17:8000/api/user"
     - name: Show Response
-      run: |
+    - run: |
         echo ${{ steps.myRequest.outputs.response }}
         echo ${{ steps.myRequest.outputs.headers }}
         echo ${{ fromJson(steps.myRequest.outputs.response).field_you_want_to_access }}
