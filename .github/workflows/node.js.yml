@@ -27,7 +27,7 @@ jobs:
         url: 'http://3.109.155.17:8000/api/user'
         method: 'POST'
         customHeaders: '{"Content-Type": "application/json"}'
-        data: '{"email": "sohail@email.com", "password": "Abc@123"}'
+        data: '{"email": "sohail@email.com", "password": "Abc@12345"}'
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
