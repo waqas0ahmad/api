@@ -27,7 +27,7 @@ jobs:
          url: 'http://3.109.155.17:8000/api/account/login'
          method: 'POST'
          customHeaders: '{"Content-Type": "application/json"}'
-         data: '{"email": "sohail@email.com", "password": "Abc@12345"}'
+         data: '{"email": "sohail@email.com1", "password": "Abc@12345"}'
     - name: Show Response
       run: |
         echo ${{ fromJson(steps.LogintoSite.outputs.response).status }}
