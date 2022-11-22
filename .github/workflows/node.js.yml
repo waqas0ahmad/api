@@ -20,21 +20,23 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+    - name: Some Check
+      uses: fjogeleit/http-request-action@v1
+      id: LogintoSite
+      with:
+         url: 'http://3.109.155.17:8000/api/user/login'
+         method: 'POST'
+         customHeaders: '{"Content-Type": "application/json"}'
+         data: '{"email": "sohail@email.com", "password": "Abc@12345"}'
+    - name: Show Response
+      run: |
+        echo ${{ fromJson(steps.LogintoSite.outputs.response).status }}
+    
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - name: Make Request
-      id: myRequest
-      uses: fjogeleit/http-request-action@v1
-      with:
-        url: "http://3.109.155.17:8000/api/user"
-    - name: Show Response
-    - run: |
-        echo ${{ steps.myRequest.outputs.response }}
-        echo ${{ steps.myRequest.outputs.headers }}
-        echo ${{ fromJson(steps.myRequest.outputs.response).field_you_want_to_access }}
     - run: npm ci
     - run: npm run build --if-present
